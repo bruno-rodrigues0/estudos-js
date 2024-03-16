@@ -1,6 +1,7 @@
 const defautlValue = 0
 
-const sum  = (a = defautlValue, b = defautlValue) => { // pode asusmir valores padroes
+const sum  = (a = defautlValue, b = defautlValue) => { 
+// pode asusmir valores padroes
     a = Number(a)
     b = Number(b)
     return a + b
