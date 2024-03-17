@@ -8,7 +8,6 @@ function aluno (nome, nota){
             console.log(this.nota)
         }, 1000)
     }
-
 }
 
 const al1 = new aluno("Bruno", 100)
