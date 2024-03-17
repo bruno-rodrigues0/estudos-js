@@ -18,8 +18,14 @@ const array = [div1, div2, div3, div4, div5, div6]
 //getElementByTagName
 
 const el = [...document.getElementsByTagName("div")]
-document.body.style = "display: flex; gap: 3rem"
+const flex = [...document.getElementById("flex")]
+
+flex.style = "display: flex; gap: 3rem"
 
 console.log(el)
 console.log(array)
+
+const desapareça = (element) => {
+    element.style = "display: none"
+}
 
