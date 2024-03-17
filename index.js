@@ -1,12 +1,34 @@
-"use strict"
+console.log("this no global: " + this)
 
-let nome = "Bruno"
-nome = 10
+function fnExpression(){
+    console.log("this dentro de function: " + this)
+}
 
-console.log(typeof(nome))
+const fnArrow = () => console.log("this em arrow function: " + this)
 
-const curso = "JavaScript"
+function nest(){
+    function nestedFunction(){
+        console.log("this em nested function: " + this)
+    }
+    nestedFunction()
+}
 
-// curso = "HTML"
+function nestedTimeout(){
 
-console.log(curso)
+    this.nome = "bruno"
+
+    this.dados_arrow = function(){
+        setTimeout(function what() {
+            console.log(this)
+        }, 1000)
+    }
+}
+
+fnExpression()
+fnArrow()
+nest()
+nestedTimeout()
+
+const al1 = new nestedTimeout()
+
+al1.dados_arrow()
