@@ -1,13 +1,13 @@
-const soma = (...value) => {
-
-    const somar = val => {
-        let res = 0
-        for(v of val){res += v}
-        return res
-    }
-    
+const soma = (...value) => {    
     return somar (value)
-
+    
+}
+const somar = val => {
+    let res = 0
+    for(v of val){res += v}
+    return res
 }
 
-console.log(soma(3, 4, 1, 4, 7, 6, 42, 6, 21))
+enterValues = [2, 4, 1, 2, 23, 23, 1, 4]
+
+console.log(soma(...enterValues))
