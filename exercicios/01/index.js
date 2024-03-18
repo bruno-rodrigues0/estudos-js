@@ -4,9 +4,10 @@ const box1 = document.querySelector("#c1")
 const box2 = document.querySelector("#c2")
 let b2Item
 
+const setBoxItems = () => b2Item = [...box2.querySelectorAll(".el")]
 
-arr.map(item => item.addEventListener("click", (event) => {
-    event.target.classList.toggle("strong")
+arr.map(item => item.addEventListener("click", () => {
+    item.classList.toggle("strong")
 }))
 
 moveBtn.addEventListener("click", () => {
@@ -17,9 +18,12 @@ moveBtn.addEventListener("click", () => {
             box1.removeChild(item)
         }
     })
-    b2Item = [...box2.querySelectorAll(".el")]
+    
+    setBoxItems()
+    
+    b2Item.map(item => item.addEventListener("click", () => {
+        item.classList.toggle("strong")
+    }))
 
-    b2Item.map(item => {
-        item.classList.remove("strong")
-    })
 })
+
