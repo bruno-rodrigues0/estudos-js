@@ -59,3 +59,7 @@ body{
     border-color: red;
     color: whi;
 }
+
+span{
+    font-family: "JetBrains Mono";
+}
