@@ -4,24 +4,21 @@ const box1 = document.querySelector("#c1")
 const box2 = document.querySelector("#c2")
 let b2Item
 
-const setBoxItems = () => b2Item = [...box2.querySelectorAll(".el")]
-
 arr.map(item => item.addEventListener("click", () => {
     item.classList.toggle("strong")
 }))
 
 moveBtn.addEventListener("click", () => {
-    arr.map(item => {
-        if(item.classList.contains("strong")){
-            box2.appendChild(item.cloneNode(true))
-            item.classList.remove("strong")
-            box1.removeChild(item)
-        }
+
+    const strongs = [...document.querySelectorAll(".strong")]
+    
+    strongs.map(item => { 
+        item.parentElement.id == "c1" 
+        ? box2.appendChild(item) 
+        : box1.appendChild(item)
     })
     
-    setBoxItems()
-    
-    b2Item.map(item => {
+    strongs.map(item => {
         item.classList.remove("strong")
     })
 })
