@@ -21,9 +21,7 @@ moveBtn.addEventListener("click", () => {
     
     setBoxItems()
     
-    b2Item.map(item => item.addEventListener("click", () => {
-        item.classList.toggle("strong")
-    }))
-
+    b2Item.map(item => {
+        item.classList.remove("strong")
+    })
 })
-
