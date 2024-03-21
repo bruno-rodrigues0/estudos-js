@@ -1,58 +1,106 @@
-const caixa1 = document.querySelector("#caixa1")
-const btn_c = [...document.querySelectorAll(".curso")]
-const c1_2 = document.querySelector("#c1_2")
+const caixa1 = document.querySelector("#caixa1");
+const add = document.querySelector(".add")
+const del = document.querySelector(".delete")
+let count = 0
 
-let elements = []
+let input = document.querySelector("input")
 
-const refresh = () => {
-    const input = document.querySelector("input")
-    if(elements.length < 7 && input.value.trim() != ''){
-
-    let newElement = document.createElement("div")
+add.addEventListener("click", function add() {
+    let value = input.value.trim()
     
-    newElement.setAttribute("class", "curso c1")
-    newElement.innerHTML = input.value
+    if(value && count < 7) {
+        caixa1.innerHTML += `<div class='curso c1'> ${value} </div>`
+        count++
+    }
+    
+    let childs = [...caixa1.children]
 
-    caixa1.appendChild(newElement)
+    childs.map(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("strong")
+        })
 
-    elements = [...document.querySelectorAll(".curso")]
+        del.addEventListener("click", () => {
+            if(item.classList.contains("strong")){
+                item.parentElement.removeChild(item)
+            }
+        })
+    })
+   
     input.value = ''
-
-   }else{
-    return
-   }
-}
-
-const add = document.querySelector("button")
-
-add.addEventListener("click", () => {
-    refresh()
-})
+    
+    
+})  
 
 
 
-// console.log(btn_c1.parentElement)
-// console.log(btn_c1.nextSibling)
-// console.log(btn_c1.lastElementChild)
-// console.log(btn_c1.children)
-// console.log(btn_c1.lastChild)
 
 
-// console.log(caixa1.hasChildNodes())
-// console.log(btn_c[0].hasChildNodes())
-// console.log(btn_c[0].childNodes)  //returns NodeList ""
-// console.log(btn_c[0].children)
 
-// if(caixa1.children.length > 0){
-//     console.log("possui filhos")
-// }else{
-//     console.log("nao possui filhos")
-// }
 
-// console.log(btn_c[0].children.length 
-// ? "possui filhos" 
-// : "nao possui filhos")
 
-// caixa1.firstElementChild.innerHTML = "ARROI'S DOCE"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const refresh = () => {
+//     const input = document.querySelector("input");
+//     if(elements.length < 7 && input.value.trim() != ''){
+
+//     let newElement = document.createElement("div");
+    
+//     newElement.setAttribute("class", "curso c1");
+//     newElement.innerHTML = input.value;
+
+//     caixa1.appendChild(newElement);
+
+//     elements.push(newElement)
+//     input.value = '';
+
+//     el = [...caixa1.children]
+
+//     el.map((item) => {
+//         item.addEventListener("click", () => {
+//             item.classList.toggle("strong")
+//         })
+
+//         document.querySelector(".delete").addEventListener("click", 
+//         () => {
+//             if(item.classList.contains("strong")){
+//                 item.parentElement.removeChild(item)
+//             }
+//         })
+//     })
+
+//    }else{
+//     return;
+//    }
+// };
+
+// const add = document.querySelector(".add");
+
+// add.addEventListener("click", () => {
+//     refresh();
+// });
+
+
+
+
+
 
 
