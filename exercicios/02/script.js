@@ -33,10 +33,10 @@ const toggleItemSelection = (item) => {
 // Função para pegar o nome do item selecionado
 const getSelectedName = () => {
     const selectedItem = document.querySelector(".item.selecionado")
-    if (selectedItem) {
+    try{
         input.value = selectedItem.textContent
-    } else {
-        alert("Nenhum item selecionado.")
+    } catch ( error ){
+        alert("Nenhum item selecionado. Erro: " + error) 
     }
 }
 
