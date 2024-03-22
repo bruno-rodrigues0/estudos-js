@@ -24,6 +24,8 @@ arr.map(item => item.addEventListener("click", function () {
 
 moveBtn.addEventListener("click", () => {
     const strongs = [...document.querySelectorAll(".strong")]
-    moveItem(strongs)
+    strongs[0] 
+    ? moveItem(strongs)
+    : alert("No items selected")
 })
 
