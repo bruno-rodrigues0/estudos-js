@@ -23,7 +23,6 @@ add.addEventListener("click", function add() {
         del.addEventListener("click", () => {
             if(item.classList.contains("strong")){
                 item.parentElement.removeChild(item)
-                console.log(this)
             }
         })
     })
