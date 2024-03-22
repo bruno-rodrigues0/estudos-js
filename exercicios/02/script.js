@@ -11,11 +11,9 @@ const addItem = (value) => {
         newItem.setAttribute("class", "item")
         newItem.innerText = value
 
-        if (box.children.length < 7) {
-            box.appendChild(newItem)
-        } else {
-            alert("A lista já possui 7 itens.")
-        }
+        box.children.length < 7
+        ? box.appendChild(newItem)
+        : alert("A lista já possui 7 itens.")
     }
 }
 
