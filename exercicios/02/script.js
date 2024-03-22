@@ -21,7 +21,7 @@ const addItem = (value) => {
 
 // Função para remover itens selecionados
 const removeSelectedItems = () => {
-    const selectedItems = document.querySelectorAll(".item.selecionado")
+    const selectedItems = [...document.querySelectorAll(".item.selecionado")]
     selectedItems.map(item => item.remove())
 }
 
