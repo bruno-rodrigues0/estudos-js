@@ -4,43 +4,62 @@ const del = document.querySelector("#btnRemove")
 const select = document.querySelector("#btnSelected")
 const box = document.querySelector("#boxCourses")
 
+// Função para adicionar um novo item à lista
+const addItem = (value) => {
+    if (value.trim() !== "") {
+        const newItem = document.createElement("div")
+        newItem.setAttribute("class", "item")
+        newItem.innerText = value
 
-add.addEventListener("click", () => {
-    let value = input.value.trim()
-    let newItem = document.createElement("div")
-    let count = 0
-
-    newItem.setAttribute("class", "item")
-    newItem.innerText = value
-
-    if(value && count < 7){
-        box.appendChild(newItem)
-        count ++
+        if (box.children.length < 7) {
+            box.appendChild(newItem)
+        } else {
+            alert("A lista já possui 7 itens.")
+        }
     }
+}
 
-    let items = [...box.children]
-    
-    items.map(item => {
-        
-        item.addEventListener("click", () => {
-            item.classList.toggle("selecionado")
-        })
+// Função para remover itens selecionados
+const removeSelectedItems = () => {
+    const selectedItems = document.querySelectorAll(".item.selecionado")
+    selectedItems.map(item => item.remove())
+}
 
-        del.addEventListener("click", () => {
-            if(item.classList.contains("selecionado")){
-                item.parentElement.removeChild(item)
-            }
-        })
-        
-    })
+// Função para selecionar ou deselecionar um item ao clicar nele
+const toggleItemSelection = (item) => {
+    item.classList.toggle("selecionado") 
+}
 
-    select.addEventListener("click", () => {
-        let filtered = items.filter(item => item.classList.contains("selecionado"))
+// Função para pegar o nome do item selecionado
+const getSelectedName = () => {
+    const selectedItem = document.querySelector(".item.selecionado")
+    if (selectedItem) {
+        input.value = selectedItem.textContent
+    } else {
+        alert("Nenhum item selecionado.")
+    }
+}
 
-        input.value = filtered[0].textContent
-    })
-
+// Adiciona um novo item ao clicar no botão "Adicionar"
+add.addEventListener("click", () => {
+    addItem(input.value)
     input.value = ''
-
 })
 
+// Remove os itens selecionados ao clicar no botão "Remover"
+del.addEventListener("click", () => {
+    removeSelectedItems()
+})
+
+// Seleciona ou deseleciona um item ao clicar nele
+box.addEventListener("click", (event) => {
+    const target = event.target
+    if (target.classList.contains("item")) {
+        toggleItemSelection(target)
+    }
+})
+
+// Pega o nome do item selecionado ao clicar no botão "Selecionado"
+select.addEventListener("click", () => {
+    getSelectedName()
+})
