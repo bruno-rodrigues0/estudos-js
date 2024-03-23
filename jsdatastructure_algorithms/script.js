@@ -9,6 +9,10 @@ class Book {
     }
 }
 
+let book2 = {
+    name: "string"
+}
+
 // class Books{
 //     title = string;
 //     pages = number;
