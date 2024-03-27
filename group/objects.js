@@ -6,9 +6,21 @@ class Pessoa{
     }
 }
 
-let p1 = new Pessoa("Gabriel", 17)
-console.log(p1)
+let p1 = new Pessoa("Gabriel", 17, "Solteiro")
 
-p1.socialStatus = "Solteiro"
-console.log(p1)
 
+class Car{
+    constructor(name, type){
+        this.name = name ?? "Não informado"
+        name == "Supra" ? this.brand = "Toyota" : this.brand = "Other"
+        type == 1 ? this.type = "Esportivo" : this.type = "Comum"
+
+        this.getCar = () => {
+            console.log(`O carro é um ${this.brand == "Toyota" ? "Toyota" : ""} ${this.name} do tipo ${this.type}`)
+        }
+    }
+}
+
+let c1 = new Car("Supra", 1)
+
+c1.getCar()
