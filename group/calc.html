@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #2f2f2f;
+            color: white;
+            font-size: 2rem;
+        }
+
+        input{
+            width: 300px;
+            height: 100px;
+            font-size: 2rem;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .buttons{
+            margin-top: 1.8rem;
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="root" class="container">
+        <label for="value1">Valor 1</label>
+        <input type="number" name="value1" id="value1">
+        <label for="value2">Valor 2</label>
+        <input type="number" name="value2" id="value2">  
+        <label for="result">Resultado</label>
+        <input type="number" name="result" id="result">
+        <div class="buttons">
+            <button class="sum">+</button>
+            <button class="sub">-</button>
+            <button class="mult">*</button>
+            <button class="div">/</button>
+        </div>  
+
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
