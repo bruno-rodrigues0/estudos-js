@@ -10,6 +10,9 @@ let p1 = new Pessoa("Gabriel", 17, "Solteiro")
 
 
 class Car{
+        
+    itemType = "car"
+
     constructor(name, type){
         this.name = name ?? "Não informado"
         name == "Supra" ? this.brand = "Toyota" : this.brand = "Other"
@@ -22,5 +25,3 @@ class Car{
 }
 
 let c1 = new Car("Supra", 1)
-
-c1.getCar()
