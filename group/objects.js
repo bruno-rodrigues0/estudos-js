@@ -14,10 +14,10 @@ class Car{
         this.name = name ?? "Não informado"
         name == "Supra" ? this.brand = "Toyota" : this.brand = "Other"
         type == 1 ? this.type = "Esportivo" : this.type = "Comum"
+    }
 
-        this.getCar = () => {
-            console.log(`O carro é um ${this.brand == "Toyota" ? "Toyota" : ""} ${this.name} do tipo ${this.type}`)
-        }
+    getCar() {
+        console.log(`O carro é um ${this.brand == "Toyota" ? "Toyota" : ""} ${this.name} do tipo ${this.type}`)
     }
 }
 
