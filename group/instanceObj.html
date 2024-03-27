@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance Object</title>
+    <style>
+        body{
+            background-color: #2f2f2f;
+            color: white;
+        }
+
+        .container{
+            font-family: sans-serif;
+            font-size: 2rem;
+        }
+
+        input{
+            width: 400px;
+            height: 40px;
+            font-size: 1.8rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="root">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <input type="button" value="Add Item" id="add">
+        
+        <div class="list">
+            <ul id="target">
+                
+            </ul>
+        </div>
+
+    </div>
+    
+    <script src="instanceObj.js"></script>
+</body>
+</html>
