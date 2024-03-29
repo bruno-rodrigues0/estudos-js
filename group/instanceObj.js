@@ -1,73 +1,38 @@
-const root = document.querySelector("#root")
-
 const name = root.querySelector("#name")
 const age = root.querySelector("#age")
-
 const add = root.querySelector("#add")
-
-const list = root.querySelector(".list")
-
 const target = root.querySelector("#target")
 
-let valueName
-let valueAge
+let persons = []
 
 class Person {
 
-    type = "person"
+    name = null
+    age = null
 
     constructor(name, age){
         this.name = name
         this.age = age
     }
-
-    getInfo(){
-        return JSON.stringify(this.name, this.age)
+    
+    getName(){
+        return this.name;
     }
-}
-
-let persons = new Set()
-
-const getName = (name) => {
-    valueName = name.value
-}
-
-const getAge = (age) => {
-    valueAge = age.value
-}
-
-const setPersons = () => {
-
-    let person = new Person(valueName, valueAge)
-    persons.add(person)
-
+    getAge(){
+        return this.age;
+    }
 }
 
 const refreshList = () => {
-    
-    let newItem = document.createElement("li")
-
-    persons.forEach(item => {
-       
-        newItem.innerText = `Name: ${item.name}. Age: ${item.age}`
-    
+    target.innerHTML = ''
+    persons.map(item => {
+        target.innerHTML += `<li> Name: ${item.getName()}, Age: ${item.getAge()}`;
     })
-
-    target.appendChild(newItem)
-    
 }
 
 add.addEventListener("click", () => {
-    getAge(age)
-    getName(name)
-    if(valueAge && valueName) {
-        setPersons()
-        refreshList()
-
-        name.value = ""
-        age.value = ""
-    } else {
-        return
+    if(name.value && age.value){
+        persons.push(new Person(name.value, age.value));
+        refreshList();
     }
-
 })
