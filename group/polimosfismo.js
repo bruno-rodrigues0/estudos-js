@@ -46,7 +46,7 @@ c1.getVelMax()
 class Especial extends Carros{
     constructor(estagioTurbo){
         super(3, estagioTurbo)
-        this.velMax = 160 * (1 + this.turbo.potencia / 75)
+        this.velMax = 160 * (1 + this.turbo.potencia / 70)
 
     }
 
