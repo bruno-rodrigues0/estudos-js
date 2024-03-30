@@ -19,3 +19,6 @@ for(let i = 0; i < 43; i++){
 }
 
 console.log(n1.disparos)
+console.log(n1.disparos)
+console.log(n1.disparos)
+console.log(n1.disparos)
