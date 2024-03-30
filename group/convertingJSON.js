@@ -1,4 +1,5 @@
-const pessoa = {
+
+let pessoa = {
     nome : "Bruno",
     github: "bruno-rodrigues0",
     curso: "tecnico em informatica",
@@ -9,3 +10,10 @@ const pessoa = {
     }
 }
 
+pessoa = JSON.stringify(pessoa)
+
+console.log(typeof(pessoa))
+
+pessoa = JSON.parse(pessoa)
+
+console.log(typeof(pessoa))
