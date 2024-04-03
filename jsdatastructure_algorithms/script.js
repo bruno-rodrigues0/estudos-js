@@ -150,8 +150,13 @@ class Book {
 
                 // exponencial
 
-//
+// const area  = 3.14*r**2;
 
 
+                // MÓDULOS
 
+import { circleArea, squareArea } from "./17-CalcArea";
+
+console.log(circleArea(2));
+console.log(squareArea(2));
 
