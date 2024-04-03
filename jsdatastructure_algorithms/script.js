@@ -85,16 +85,16 @@
 
 // //nova sintaxe
 
-// class Book {
-//     constructor(title, pages, isbn){
-//         this.title = title;
-//         this.pages = pages;
-//         this.isbn = isbn;
-//     }
-//     printIsbn(){
-//         console.log(this.isbn);
-//     }
-// }
+class Book {
+    constructor(title, pages, isbn){
+        this.title = title;
+        this.pages = pages;
+        this.isbn = isbn;
+    }
+    printIsbn(){
+        console.log(this.isbn);
+    }
+}
 
 // let book  = new Book('Se eu ficar', '512', 1398)
 
@@ -104,6 +104,49 @@
 
 
 //        //        // Herança
+
+// class ITbooks extends Book{
+//     constructor(title, pages, isbn, technology){
+//         super(title, pages, isbn);
+//         this.technology = technology;
+//     }
+
+//     printTech(){
+//         console.log(this.technology);
+//     }
+// }
+
+// let jsBook = new ITbooks('Learning JS Algorithms', '234', '12387503890', 'JavaScript');
+
+// console.log(jsBook.title);
+// jsBook.printTech();
+
+
+                // GETTERS E SETTERS
+
+
+class Person {
+    constructor(name){
+        this._name = name;
+    }
+
+    get name(){
+        return this._name;
+    }
+
+    set name(value){
+        this._name = value;
+    }
+}
+
+let lotrChar = new Person('Frodo');
+
+console.log(lotrChar.name);
+lotrChar.name = 'Gandalf';
+console.log(lotrChar.name);
+lotrChar._name = 'Sam';
+console.log(lotrChar.name);
+
 
 
 
