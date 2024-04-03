@@ -11,18 +11,30 @@
 
 body{
     background-color: #2f2f2f;
+    color: white;
+}
+
+html{
+    height: 910px;;
 }
 
 .center{
     width: 313px;
     background-color: #3f3f3f;
-    margin: auto;
-    margin-top: 200px;
     padding: 1.5rem;
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 910px;
+    left: -313px;
+    transition: .6s ease-in-out;
 }
 
 h3{
@@ -98,4 +110,17 @@ a, a:visited{
 
 .enter{
     background-color: #ff2b2b !important;
+}
+
+.aba{
+    background-color: #666869;
+    padding: 1rem .5rem;
+    border-radius: 0 4px 4px 0;
+    color: white;    
+    border: none;
+
+}
+
+.showme{
+    left: 0;
 }
