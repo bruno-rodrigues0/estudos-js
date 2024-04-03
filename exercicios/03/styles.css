@@ -124,3 +124,12 @@ a, a:visited{
 .showme{
     left: 0;
 }
+
+.arrow{
+    font-size: 1rem;
+    transition: all .6s ease-in-out;
+}
+
+.animation{
+    transform: rotate(0.5turn);
+}

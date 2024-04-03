@@ -36,6 +36,10 @@ const calculate = () => {
 
 const showCalc = () => {
     let container = document.querySelector(".container");
+    let arrow = document.querySelector(".arrow");
 
     container.classList.toggle("showme");
+    arrow.classList.toggle('animation');
+
+
 }
