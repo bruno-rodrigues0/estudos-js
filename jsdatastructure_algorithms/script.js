@@ -69,3 +69,44 @@
 // }
 
 // hello.printHello();
+
+// declaração de classes
+
+//             //sintaxe antiga
+// function Books(title, pages, isbn){
+//     this.title = title;
+//     this.pages = pages;
+//     this.isbn = isbn;
+// }
+
+// Books.prototype.prinTitle = function() {
+//     console.log(this.title);
+// }
+
+// //nova sintaxe
+
+// class Book {
+//     constructor(title, pages, isbn){
+//         this.title = title;
+//         this.pages = pages;
+//         this.isbn = isbn;
+//     }
+//     printIsbn(){
+//         console.log(this.isbn);
+//     }
+// }
+
+// let book  = new Book('Se eu ficar', '512', 1398)
+
+// console.log(book.title);
+// book.title = 'Para onde ela foi';
+// console.log(book.title);
+
+
+//        //        // Herança
+
+
+
+
+
+
