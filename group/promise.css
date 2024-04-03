@@ -1,11 +1,24 @@
 .numero{
-    font-size: larger;
+    font-size: 2rem;
+}
+
+body{
+    background-color: #2f2f2f;
+    color: white;
+}
+button{
+    border:none;
+    padding: 1rem;
+    background-color: #3f3f3f;
+    border-radius: 8px;
+    color: white;
 }
 
 .ok{
-    color: blue;
+    color: #129fd4;
 }
 
 .erro{
-    color: red;
+    color: rgb(211, 40, 40);
 }
+
