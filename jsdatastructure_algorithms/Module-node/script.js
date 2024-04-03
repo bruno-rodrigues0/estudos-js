@@ -85,16 +85,16 @@
 
 // //nova sintaxe
 
-class Book {
-    constructor(title, pages, isbn){
-        this.title = title;
-        this.pages = pages;
-        this.isbn = isbn;
-    }
-    printIsbn(){
-        console.log(this.isbn);
-    }
-}
+// class Book {
+//     constructor(title, pages, isbn){
+//         this.title = title;
+//         this.pages = pages;
+//         this.isbn = isbn;
+//     }
+//     printIsbn(){
+//         console.log(this.isbn);
+//     }
+// }
 
 // let book  = new Book('Se eu ficar', '512', 1398)
 
@@ -155,7 +155,7 @@ class Book {
 
                 // MÓDULOS
 
-import { circleArea, squareArea } from "./17-CalcArea";
+import { circleArea, squareArea } from './17-CalcArea.js';
 
 console.log(circleArea(2));
 console.log(squareArea(2));
