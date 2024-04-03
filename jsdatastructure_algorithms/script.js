@@ -42,24 +42,30 @@
 // )
 
 
-// function sum (){
-//     let array = []
-    
-//     for(item of arguments){
-//         array.push(item)
-//     }
+// let [x, y] = [1, 6];
 
-//     console.log(array)
+// console.log(x, y);
+
+// [x, y] = [y, x];
+
+// console.log(x, y);
+
+// Property shorthand
+
+// let [x, y] = ['a', 'b'];
+
+// let obj = {x, y}
+
+// console.log(obj);
+
+
+// Declaração de funções como propriedades em objetos
+
+// const hello = {
+//     name: 'abc',
+//     printHello(){
+//         console.log('Hello, World');
+//     }
 // }
 
-import express from 'express'
-
-const app = express()
-
-app.get('/', (req, res) => {
-    const users = ['Bruno', 'Gabriel']
-
-    return res.json({ users })
-});
-
-app.listen(3333);
+// hello.printHello();
