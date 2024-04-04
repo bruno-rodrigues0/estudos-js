@@ -81,6 +81,8 @@ for(let i = 2; i < 20; i++){
 
 // cria função interna da classe Array q adiciona um elemento a qualquer posição do array
 Array.prototype.addInIndex = function(value, index){
+
+    // manda um erro caso o indice informado nao esteja dentro do array
     if(index > this.length-1 || index < 0 ){
         throw TypeError('Não é possivel adicionar elementos fora do indice máximo.');
     }
@@ -91,15 +93,21 @@ Array.prototype.addInIndex = function(value, index){
     this[index] = value; 
 }
 
+// cria função interna da classe Array q remove um elemento em qualquer posição do array
 Array.prototype.removeFromIndex = function(index){ 
+
+      // manda um erro caso o indice informado nao esteja dentro do array
     if(index > this.length-1 || index < 0 ){
         throw TypeError('Não é possivel remover elementos fora dos indices existentes.');
     }
-
+    
+    // passa cada elemento do array 1 indice para tras, começando pelo indice informado
     for(let i = index; i < this.length; i++){
         this[i] = this[i+1];
+    // isso resulta no ultimo indice do array ficar vazio (undefined)
     }
 
+    // remove o item undefined ao final
     this.pop();
 }
 
