@@ -118,4 +118,48 @@ let nums = [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 nums.splice(0, 0, -4, -3);
 nums.splice(9, 5);
 
-console.log(nums);
+// console.log(nums);
+
+
+/*
+    Arrays bi e multidimensionais 
+
+    JavaScript n tem suporte para arrays bidimensionais ou matrizes
+    esse problema eh resolvido com um 'array de arrays'
+*/
+
+let averageTemps = [];
+averageTemps[0] = [];
+averageTemps[0][0] = 72; 
+averageTemps[0][1] = 77; 
+averageTemps[0][2] = 75; 
+averageTemps[0][3] = 73; 
+averageTemps[0][4] = 71;
+
+averageTemps[1] = [];
+averageTemps[1][0] = 79;
+averageTemps[1][1] = 81;
+averageTemps[1][2] = 76;
+averageTemps[1][3] = 75;
+averageTemps[1][4] = 79;
+
+// for(let i = 0; i < averageTemps.length; i++){
+//     for(let j = 0; j < averageTemps[i].length; j++){
+//         console.log(averageTemps[i][j]);
+//     }
+// }
+
+// console.table(averageTemps);
+
+let matrix3x3x3 = [];
+for(let i = 0; i < 3; i++){
+    matrix3x3x3[i] = [];
+    for(let j = 0; j < 3; j++){
+        matrix3x3x3[i][j] = [];
+        for(let k = 0; k < 3; k++){
+            matrix3x3x3[i][j][k]= i+j+k;
+        }
+    }
+}
+
+console.table(matrix3x3x3);
