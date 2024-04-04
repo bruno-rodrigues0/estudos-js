@@ -78,7 +78,6 @@ for(let i = 2; i < 20; i++){
     numbers.shift()
  */
 
-let numbers = [0, 1, 2, 4, 5, 6];
 
 // cria função interna da classe Array q adiciona um elemento a qualquer posição do array
 Array.prototype.addInIndex = function(value, index){
@@ -88,13 +87,11 @@ Array.prototype.addInIndex = function(value, index){
     this[index] = value; 
 }
 
+Array.prototype.removeFromIndex = function(index){ 
+    for(let i = index; i < this.length; i++){
+        this[i] = this[i+1];
+    }
 
-let names = ['Bruno', 'Gabriel'];
-
-names.addInIndex('Fernanda', 1);
-
-console.log(names);
-
-
-
+    this.pop();
+}
 
