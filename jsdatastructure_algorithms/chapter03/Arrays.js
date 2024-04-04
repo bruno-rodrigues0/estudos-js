@@ -162,4 +162,13 @@ for(let i = 0; i < 3; i++){
     }
 }
 
-console.table(matrix3x3x3);
+// console.table(matrix3x3x3);
+
+
+let letters =['a', 'd', 'h', 'b', 'e', 'c'];
+letters.sort();
+let num = [7, 3, 76, 4, 6, 5];
+num.sort();
+
+console.log(letters, num);
+
