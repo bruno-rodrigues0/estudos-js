@@ -80,11 +80,12 @@ for(let i = 2; i < 20; i++){
 
 let numbers = [0, 1, 2, 4, 5, 6];
 
+// cria função interna da classe Array q adiciona um elemento a qualquer posição do array
 Array.prototype.addInIndex = function(value, index){
-    for(let i = this.length - 1; i > index -1; i--){
-        this[i+1] = this[i];
+    for(let i = this.length - 1 /* i = ultimo indice do array */; i >= index /* enquando i for >= ao indice ao qual se quer adicionar */; i--){
+        this[i+1] = this[i]; /* move os elementos 1 indice para frente */
     }
-    this[index] = value;
+    this[index] = value; 
 }
 
 
