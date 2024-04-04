@@ -111,3 +111,11 @@ Array.prototype.removeFromIndex = function(index){
     this.pop();
 }
 
+// Para adicionar ou remover elementos a qualquer posição do array, podemos utilizar o metodo splice()
+
+let nums = [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+nums.splice(0, 0, -4, -3);
+nums.splice(9, 5);
+
+console.log(nums);
