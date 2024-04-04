@@ -57,4 +57,43 @@ for(let i = 2; i < 20; i++){
 
 // console.log(fibonacci);
 
+/*
+    Inserindo elementos no array
+
+    Método push insere ao final do array
+
+    let numbers = [1, 5, 0]
+    numbers.push(6)
+
+    Método pop remove um elemento ao final do array
+
+    numbers.pop()
+
+    Método unshift insere ao inicio do array
+    
+    numbers.unshift(10)
+
+    Método shift remove um elemento ao inicio do array
+
+    numbers.shift()
+ */
+
+let numbers = [0, 1, 2, 4, 5, 6];
+
+Array.prototype.addInIndex = function(value, index){
+    for(let i = this.length - 1; i > index -1; i--){
+        this[i+1] = this[i];
+    }
+    this[index] = value;
+}
+
+
+let names = ['Bruno', 'Gabriel'];
+
+names.addInIndex('Fernanda', 1);
+
+console.log(names);
+
+
+
 
