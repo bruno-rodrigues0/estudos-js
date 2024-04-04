@@ -155,8 +155,8 @@
 
                 // MÓDULOS
 
-import { circleArea as circle, squareArea as square } from './17-CalcArea.js';
+// import { circleArea as circle, squareArea as square } from './17-CalcArea.js';
 
-console.log(circle(5));
-console.log(square(2));
+// console.log(circle(5));
+// console.log(square(2));
 
