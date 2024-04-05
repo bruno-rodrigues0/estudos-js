@@ -6,18 +6,17 @@ map.set("cu3", "cuzhino3")
 
 console.log(map)
 
-// console.log(map.get("anal"))
-// console.log(map.values())
-// console.log(map.keys())
-// console.log(map.size)
+console.log(map.get("cu"))
+console.log(map.values())
+console.log(map.keys())
+console.log(map.size)
 
-map.delete("cu2")
+// map.delete("cu2")
 
-console.log(map)
+// console.log(map)
 
-map.clear()
+// map.clear()
 
-console.log(map)
+// console.log(map)
 
-console.log(typeof(map))
-
+// console.log(typeof(map))
