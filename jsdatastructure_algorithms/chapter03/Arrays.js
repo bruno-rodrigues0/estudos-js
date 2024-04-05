@@ -182,7 +182,7 @@
 // let numbers = negativeNums.concat(zero, positiveNums);
 // console.log(numbers);
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 // const isEven = x => x % 2 === 1;
 
@@ -263,33 +263,35 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 // ordenando arrays
 
-numbers.reverse();
+// numbers.reverse();
 
-const pessoas = [
-    {nome: 'Fernanda', age: 18},
-    {nome: 'Bruno', age: 17},
-    {nome: 'Gabriel', age: 15},
-]
+// const pessoas = [
+//     {nome: 'Fernanda', age: 18},
+//     {nome: 'Bruno', age: 17},
+//     {nome: 'Gabriel', age: 15},
+// ]
 
-const compare = (a, b) => {
-    if(a.age> b.age){
-        return 1;
-    } else if(a.age < b.age){
-        return -1;
-    } else if(a.age === b.age){
-        return 0;
-    }
+// const compare = (a, b) => {
+//     if(a.age> b.age){
+//         return 1;
+//     } else if(a.age < b.age){
+//         return -1;
+//     } else if(a.age === b.age){
+//         return 0;
+//     }
 
-}
+// }
 
 // console.log(pessoas.sort(compare))
 
 // ordenanda strings (ordenado pela ordem de precedencia na tabela ASCII)
 
-let names = ['Fernanda', 'bruno', 'Gabriel'];
+// let names = ['Fernanda', 'bruno', 'Gabriel'];
 
 // letras maiusculas vêm antes de minusculas em ASCII
 
-names.sort();
+// names.sort();
 
-console.log(names);
+// console.log(names);
+
+
