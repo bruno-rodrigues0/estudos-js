@@ -200,4 +200,42 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 
 let number_reduced = numbers.reduce((previous, current) => previous + current);
-console.log(number_reduced)
+// console.log(number_reduced);
+
+// console.log(numbers.includes(4));
+// console.log(numbers.find(item => item / 2 == 2));
+// console.log(numbers.findIndex(item => item / 2 == 2));
+
+
+// for(const n of numbers){
+//     console.log(n);
+// }
+
+// @@iterator 
+
+let iterator = numbers[Symbol.iterator]();
+
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+
+
+// entries, keys e values de arrays
+
+let numbersEntries = numbers.entries();
+
+// for(const n of numbersEntries){
+//     console.log(n);
+// }
+
+
+let numbersKeys = numbers.keys();
+
+// for(const n of numbersKeys){
+//     console.log(n);
+// }
+
+let numbersValues = numbers.values();
+
+for(const n of numbersKeys){
+    console.log(n);
+}
