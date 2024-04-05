@@ -241,13 +241,21 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 // }
 
 
-let numbers2 = Array.from(numbers);
+// let numbers2 = Array.from(numbers);
 
-let numbers3 = Array.of(2, 4, 6, 8, 10, 12, 14, 16, 18);
+// let numbers3 = Array.of(2, 4, 6, 8, 10, 12, 14, 16, 18);
 
-let numbers4 = Array.of(...numbers3);
+// let numbers4 = Array.of(...numbers3);
 
-numbers4.fill(0);
+// numbers4.fill(0);
 
-console.log(numbers4);
+// console.log(numbers4);
 
+// copyWithin()
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8];
+
+array.copyWithin(1, 5 /* inclusivo*/, 8 /* nao inclusivo */);
+
+console.log(array);
