@@ -1,0 +1,5 @@
+let binary = 0b1111111111111111111111111111111111111111111111111111111111111111 ;
+
+// console.log(Number.MAX_SAFE_INTEGER);
+console.log(binary);
+ 
