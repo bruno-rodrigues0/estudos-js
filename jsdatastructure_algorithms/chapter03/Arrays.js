@@ -199,7 +199,7 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 // console.log(filterOutput);
 
 
-let number_reduced = numbers.reduce((previous, current) => previous + current);
+// let number_reduced = numbers.reduce((previous, current) => previous + current);
 // console.log(number_reduced);
 
 // console.log(numbers.includes(4));
@@ -213,7 +213,7 @@ let number_reduced = numbers.reduce((previous, current) => previous + current);
 
 // @@iterator 
 
-let iterator = numbers[Symbol.iterator]();
+// let iterator = numbers[Symbol.iterator]();
 
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
@@ -221,21 +221,33 @@ let iterator = numbers[Symbol.iterator]();
 
 // entries, keys e values de arrays
 
-let numbersEntries = numbers.entries();
+// let numbersEntries = numbers.entries();
 
 // for(const n of numbersEntries){
 //     console.log(n);
 // }
 
 
-let numbersKeys = numbers.keys();
+// let numbersKeys = numbers.keys();
 
 // for(const n of numbersKeys){
 //     console.log(n);
 // }
 
-let numbersValues = numbers.values();
+// let numbersValues = numbers.values();
 
-for(const n of numbersKeys){
-    console.log(n);
-}
+// for(const n of numbersKeys){
+//     console.log(n);
+// }
+
+
+let numbers2 = Array.from(numbers);
+
+let numbers3 = Array.of(2, 4, 6, 8, 10, 12, 14, 16, 18);
+
+let numbers4 = Array.of(...numbers3);
+
+numbers4.fill(0);
+
+console.log(numbers4);
+
