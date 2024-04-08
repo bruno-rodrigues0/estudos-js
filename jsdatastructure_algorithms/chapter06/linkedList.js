@@ -16,7 +16,22 @@ export default class LinkedList{
         this.#equalsFn = equalsFn;
     }   
 
-    push(){
-        
+    push(element){
+        const node = new Node(element);
+        let current;
+
+        if(this.#head == null){
+            this.#head = node;
+        } else {
+            current = this.#head;
+
+            while(current.next != null){
+                current = current.next;
+            }
+
+            current.next = node;
+        }
+
+        this.#count++;
     }
 }
