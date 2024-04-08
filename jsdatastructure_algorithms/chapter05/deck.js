@@ -1,4 +1,4 @@
-class Deck{
+export class Deck{
 
     #count;
     #lowestCount;
@@ -27,7 +27,7 @@ class Deck{
         this.#items[0] = element;
     }
 
-    addBack(){
+    addBack(element){
         this.#items[this.#count] = element;
         this.#count++;
     }
