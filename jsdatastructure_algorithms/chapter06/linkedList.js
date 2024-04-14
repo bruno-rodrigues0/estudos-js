@@ -1,4 +1,3 @@
-import { Link } from "lucide";
 import { Node } from "./linked-list-models";
 
 function defaultEquals(a, b) {
